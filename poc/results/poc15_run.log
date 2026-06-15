@@ -1,0 +1,46 @@
+================================================================
+POC-15: 카탈로그 끌림 모델 (M1) — Maltese
+================================================================
+단어 7394  (borrowed 4302, inherited 3092, 다수 0.582)
+카탈로그(출처 단어, dedup) 4081
+후보 인덱싱…
+prefilter recall(천장): 0.938  (3996/4259)
+카탈로그 적응비용 계산…
+[설계 발견] raw 우도서 차용채널이 이기는 단어: 7394/7394 (1.000) → 혼합 EM은 all-borrowed로 붕괴(탐지에 raw 우도 못 씀).
+결합 탐지기 (phonotactic ⊕ 카탈로그 비용, 비지도)…
+  boot0  pred_bor=3336  F1=0.826
+  boot1  pred_bor=4151  F1=0.877
+  boot2  pred_bor=3480  F1=0.849
+  boot3  pred_bor=3662  F1=0.862
+  boot4  pred_bor=3679  F1=0.864
+  boot5  pred_bor=3680  F1=0.864
+  boot6  pred_bor=3679  F1=0.864
+  boot7  pred_bor=3679  F1=0.864
+채널 정련 (탐지 게이트 → 적응 학습)…
+  refit0  pairs=3679
+  refit1  pairs=3679
+  refit2  pairs=3679
+----------------------------------------------------------------
+[탐지, 비지도 결합]  정확도 0.853 (다수 0.582)
+  precision 0.937  recall 0.801  F1 0.864   (POC-14 0.764)
+[출처 식별]  정확도 0.861  (3440/3996, prefilter천장 0.938)
+----------------------------------------------------------------
+출처식별 예시 (word ← gold | picked | hit | pred_bor):
+  arkivju        ← archivio      | archivio      | ✓ | bor=False
+  trombettun     ← trombettone   | trombettone   | ✓ | bor=True
+  teknokrazija   ← tecnocrazia   | tecnocrazia   | ✓ | bor=True
+  berrina        ← virrina       | virrina       | ✓ | bor=True
+  fazola         ← fasola        | fasola        | ✓ | bor=True
+  cinga          ← cinga         | cinga         | ✓ | bor=True
+  teoretikament  ← teoreticamente | teoreticamente | ✓ | bor=True
+  tutela         ← tutela        | tutela        | ✓ | bor=True
+  pajjiz         ← pajisi        | pajisi        | ✓ | bor=False
+  bbulja         ← bully         | brusca        | ✗ | bor=False
+  statistiku     ← statistico    | statistico    | ✓ | bor=True
+  assi           ← asse          | asse          | ✓ | bor=True
+  accenna        ← accennare     | accenno       | ✗ | bor=True
+  dimostrant     ← dimostrante   | dimostrante   | ✓ | bor=True
+----------------------------------------------------------------
+판정: F1 > POC-14 ✓ / 출처식별 작동 ✓
+결론: 카탈로그 끌림이 출처귀속(M1 신규)을 정확히 복원 + phonotactic과 결합하면 탐지도
+      POC-14 초과. ★ 탐지/귀속은 다른 통계 필요(raw 카탈로그 우도는 탐지서 붕괴).

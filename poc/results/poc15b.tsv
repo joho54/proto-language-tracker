@@ -1,0 +1,7 @@
+stat	frac_bor	f1	auc
+raw_sign	1.0000	0.7356	0.6518
+charged_sign	0.8882	0.7473	0.6518
+raw_gmm	0.1158	0.2315	0.6518
+charged_gmm	0.1158	0.2315	0.6518
+nsim_only	-	-	0.8677
+# null_floor_perchar borrowed -2.7773 inherited -6.4620; shift(const) -3.6847 distinct 1

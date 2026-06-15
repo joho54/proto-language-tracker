@@ -1,0 +1,2 @@
+acc	majority	precision	recall	f1	poc14_f1	sid_acc	sid_n	prefilter_recall	raw_collapse_frac
+0.8533	0.5818	0.9372	0.8015	0.8641	0.7640	0.8609	3996	0.9382	1.0000

@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Large downloaded data dumps (regenerable via poc/kaikki.py)
+data/kaikki/*.jsonl
+
+# Scraping caches (regenerable; large)
+poc/results/wikt_cache/
+poc/results/wikt_cache2/
+
+# Keep: poc/results/*.tsv (small experiment outputs)

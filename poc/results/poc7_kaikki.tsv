@@ -1,0 +1,6 @@
+held_out	n_tok	LL_others	LL_within	LL_null	Spearman	perm_p	transfer
+Proto-Indo-European	11788	-5.3264	-4.6776	-6.4708	0.262	0.003	도움
+Proto-Uralic	2437	-4.7835	-4.4894	-6.4708	0.377	0.003	도움
+Proto-Turkic	3806	-4.6285	-4.1791	-6.4708	0.441	0.003	도움
+Proto-Japonic	307	-4.8301	-3.8934	-6.4708	0.219	0.003	도움
+Proto-Sino-Tibetan	1283	-5.7038	-5.0654	-6.4708	0.284	0.003	도움

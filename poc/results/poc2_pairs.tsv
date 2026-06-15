@@ -1,0 +1,82 @@
+proto_lang	daughter_lang	family	daughter_is_proto	proto_ipa	daughter_ipa	raw
+PIE	Classical Armenian	ie	False	pħteːr	հայր	հայր
+PIE	Classical Armenian	ie	False	pħteːr	յօրայ	յօրայ
+PIE	Proto-Celtic	ie	True	pħteːr	ɸatiːr	ɸatīr
+PIE	Proto-Germanic	ie	True	pħteːr	fadeːr	fadēr
+PIE	Proto-Hellenic	ie	True	pħteːr	pateːr	patḗr
+PIE	Proto-Indo-Iranian	ie	True	pħteːr	phtaː	phtā́
+PIE	Proto-Italic	ie	True	pħteːr	pateːr	patēr
+PIE	Tocharian A	ie	False	pħteːr	paːcar	pācar
+PIE	Tocharian B	ie	False	pħteːr	paːcer	pācer
+PIE	Classical Armenian	ie	False	meħteːr	մայր	մայր
+PIE	Proto-Balto-Slavic	ie	True	meħteːr	maːˀteː	mā́ˀtē
+PIE	Proto-Celtic	ie	True	meħteːr	maːtiːr	mātīr
+PIE	Proto-Germanic	ie	True	meħteːr	moːdeːr	mōdēr
+PIE	Proto-Hellenic	ie	True	meħteːr	maːteːr	mā́tēr
+PIE	Proto-Indo-Iranian	ie	True	meħteːr	mahtaː	máhtā
+PIE	Proto-Italic	ie	True	meħteːr	maːteːr	mātēr
+PIE	Classical Armenian	ie	False	dwoh	երկու	երկու
+PIE	Classical Armenian	ie	False	dwoh	կրկին	կրկին
+PIE	Proto-Balto-Slavic	ie	True	dwoh	duwoːˀ	duwōˀ
+PIE	Proto-Celtic	ie	True	dwoh	duwo	duwo
+PIE	Proto-Germanic	ie	True	dwoh	twai	twai
+PIE	Proto-Hellenic	ie	True	dwoh	duwo	dúwo
+PIE	Proto-Indo-Iranian	ie	True	dwoh	dwah	dwáh
+PIE	Proto-Italic	ie	True	dwoh	duoː	duō
+PIE	Tocharian A	ie	False	dwoh	wu	wu
+PIE	Tocharian B	ie	False	dwoh	wi	wi
+PIE	Classical Armenian	ie	False	treyes	երեք	երեք
+PIE	Proto-Balto-Slavic	ie	True	treyes	trijes	tríjes
+PIE	Proto-Celtic	ie	True	treyes	triːs	trīs
+PIE	Proto-Germanic	ie	True	treyes	þriːz	þrīz
+PIE	Proto-Hellenic	ie	True	treyes	treyes	tréyes
+PIE	Proto-Indo-Iranian	ie	True	treyes	trayas	tráyas
+PIE	Proto-Italic	ie	True	treyes	treːs	trēs
+PIE	Proto-Balto-Slavic	ie	True	nokʷts	naktis	náktis
+PIE	Proto-Celtic	ie	True	nokʷts	noxs	noxs
+PIE	Proto-Germanic	ie	True	nokʷts	nahts	nahts
+PIE	Proto-Hellenic	ie	True	nokʷts	nukts	nukts
+PIE	Ancient Greek	ie	False	nokʷts	νυξ	νύξ
+PIE	Proto-Indo-Iranian	ie	True	nokʷts	nakts	nákts
+PIE	Sanskrit	ie	False	nokʷts	नक्त्	नक्त्
+PIE	Proto-Italic	ie	True	nokʷts	nokts	nokts
+PIE	Latin	ie	False	nokʷts	nox	nox
+PIE	Classical Armenian	ie	False	kʲeːr	սիրտ	սիրտ
+PIE	Proto-Balto-Slavic	ie	True	kʲeːr	seːr	śḗr
+PIE	Proto-Celtic	ie	True	kʲeːr	kridyom	kridyom
+PIE	Proto-Germanic	ie	True	kʲeːr	hertô	hertô
+PIE	Proto-Hellenic	ie	True	kʲeːr	kərdiyaː	kərdíyā
+PIE	Ancient Greek	ie	False	kʲeːr	καρδια	καρδία
+PIE	Proto-Italic	ie	True	kʲeːr	kord	kord
+PIE	Proto-Indo-Iranian	ie	True	kʲeːr	ȷʰaːrd	ȷ́ʰā́rd
+PIE	Classical Armenian	ie	False	poːds	ոտն	ոտն
+PIE	Proto-Celtic	ie	True	poːds	ɸuːts	ɸūts
+PIE	Proto-Celtic	ie	True	poːds	ɸiːssu	ɸīssu
+PIE	Proto-Celtic	ie	True	poːds	ɸodyaː	ɸodyā
+PIE	Proto-Germanic	ie	True	poːds	foːts	fōts
+PIE	Ancient Greek	ie	False	poːds	πους	πούς
+PIE	Proto-Indo-Iranian	ie	True	poːds	paːts	pā́ts
+PIE	Proto-Italic	ie	True	poːds	pets	pets
+PIE	Tocharian A	ie	False	poːds	pe	pe
+PIE	Tocharian B	ie	False	poːds	paiyye	paiyye
+PIE	Proto-Balto-Slavic	ie	True	ɡʲombʰos	zambas	źámbas
+PIE	Proto-Germanic	ie	True	ɡʲombʰos	kambaz	kambaz
+PIE	Proto-Hellenic	ie	True	ɡʲombʰos	ɡompʰos	gómpʰos
+PIE	Proto-Indo-Iranian	ie	True	ɡʲombʰos	ȷambʰas	ȷ́ámbʰas
+PIE	Classical Armenian	ie	False	swekʲs	վեց	վեց
+PIE	Proto-Balto-Slavic	ie	True	swekʲs	šeš	šéš
+PIE	Proto-Celtic	ie	True	swekʲs	swexs	swexs
+PIE	Proto-Germanic	ie	True	swekʲs	sehs	sehs
+PIE	Proto-Hellenic	ie	True	swekʲs	hweks	hwéks
+PIE	Proto-Indo-Iranian	ie	True	swekʲs	šwacš	šwáćš
+PIE	Proto-Italic	ie	True	swekʲs	seks	seks
+PIE	Tocharian A	ie	False	swekʲs	ṣäk	ṣäk
+PIE	Tocharian B	ie	False	swekʲs	ṣkas	ṣkas
+PIE	Classical Armenian	ie	False	kʲwoː	շուն	շուն
+PIE	Classical Armenian	ie	False	kʲwoː	սկունդ	սկունդ
+PIE	Proto-Balto-Slavic	ie	True	kʲwoː	kwoː	kwṓ
+PIE	Proto-Celtic	ie	True	kʲwoː	kuː	kū
+PIE	Proto-Germanic	ie	True	kʲwoː	hundaz	hundaz
+PIE	Ancient Greek	ie	False	kʲwoː	κῠων	κῠ́ων
+PIE	Proto-Indo-Iranian	ie	True	kʲwoː	cwaː	ćwā́
+PIE	Latin	ie	False	kʲwoː	caneːs	canēs

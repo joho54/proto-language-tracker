@@ -1,0 +1,13 @@
+condition	MI	p_value	verdict
+unrelated	0.7274	0.9169	무유의 ✓
+related_d2	2.5524	0.0033	유의(탐지 ✓)
+related_d4	2.1463	0.0033	유의(탐지 ✓)
+related_d6	2.1964	0.0033	유의(탐지 ✓)
+related_d8	2.2153	0.0033	유의(탐지 ✓)
+related_d10	2.3576	0.0033	유의(탐지 ✓)
+horizon_keep1.0	2.4883	0.0033	탐지 ✓
+horizon_keep0.6	1.4649	0.0033	탐지 ✓
+horizon_keep0.4	1.0198	0.0033	탐지 ✓
+horizon_keep0.25	0.9105	0.0033	탐지 ✓
+horizon_keep0.15	0.8231	0.0033	탐지 ✓
+horizon_keep0.08	0.7583	0.2126	지평 너머(탐지불가)

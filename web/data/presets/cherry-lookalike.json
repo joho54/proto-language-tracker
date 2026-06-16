@@ -289,5 +289,487 @@
    "b": "tur"
   }
  ],
- "note": "Unrelated (IE) pairs, but keeping only the ones that LOOK similar. p can drop — but it's an artifact of post-hoc selection."
+ "note": "Unrelated (IE) pairs, but keeping only the ones that LOOK similar. The test 'detects' — but that's the trap: the signal is the selection, not the languages.",
+ "proper": [
+  {
+   "a": "dheb",
+   "b": "peson"
+  },
+  {
+   "a": "ophs",
+   "b": "kup"
+  },
+  {
+   "a": "mey",
+   "b": "okta"
+  },
+  {
+   "a": "dm",
+   "b": "ten"
+  },
+  {
+   "a": "hyos",
+   "b": "so"
+  },
+  {
+   "a": "hhs",
+   "b": "papkumon"
+  },
+  {
+   "a": "wy",
+   "b": "uritur"
+  },
+  {
+   "a": "pthr",
+   "b": "nare"
+  },
+  {
+   "a": "hewg",
+   "b": "tunkasikita"
+  },
+  {
+   "a": "kag",
+   "b": "tatta"
+  },
+  {
+   "a": "hsewt",
+   "b": "kuhta"
+  },
+  {
+   "a": "ksweyb",
+   "b": "tetik"
+  },
+  {
+   "a": "peh",
+   "b": "turinku"
+  },
+  {
+   "a": "ks",
+   "b": "onu"
+  },
+  {
+   "a": "heys",
+   "b": "iro"
+  },
+  {
+   "a": "gstis",
+   "b": "sonnim"
+  },
+  {
+   "a": "nd",
+   "b": "soke"
+  },
+  {
+   "a": "leyg",
+   "b": "torta"
+  },
+  {
+   "a": "kos",
+   "b": "mati"
+  },
+  {
+   "a": "ptn",
+   "b": "pit"
+  },
+  {
+   "a": "bey",
+   "b": "porre"
+  },
+  {
+   "a": "hed",
+   "b": "mokta"
+  },
+  {
+   "a": "pew",
+   "b": "tiruta"
+  },
+  {
+   "a": "ksewd",
+   "b": "punhetota"
+  },
+  {
+   "a": "sehih",
+   "b": "kurimta"
+  },
+  {
+   "a": "nisds",
+   "b": "tunti"
+  },
+  {
+   "a": "deg",
+   "b": "nukita"
+  },
+  {
+   "a": "krewh",
+   "b": "martuk"
+  },
+  {
+   "a": "grend",
+   "b": "pim"
+  },
+  {
+   "a": "wet",
+   "b": "non"
+  },
+  {
+   "a": "behos",
+   "b": "notopamnamu"
+  },
+  {
+   "a": "wrhds",
+   "b": "puri"
+  },
+  {
+   "a": "kr",
+   "b": "oti"
+  },
+  {
+   "a": "deyws",
+   "b": "hananim"
+  },
+  {
+   "a": "bak",
+   "b": "koti"
+  },
+  {
+   "a": "tri",
+   "b": "set"
+  },
+  {
+   "a": "brhtr",
+   "b": "purato"
+  },
+  {
+   "a": "tehg",
+   "b": "tahta"
+  },
+  {
+   "a": "drehg",
+   "b": "titta"
+  },
+  {
+   "a": "gelh",
+   "b": "tutta"
+  },
+  {
+   "a": "ps",
+   "b": "opuro"
+  },
+  {
+   "a": "pstn",
+   "b": "tot"
+  },
+  {
+   "a": "leg",
+   "b": "pon"
+  },
+  {
+   "a": "hlngus",
+   "b": "sonsupta"
+  },
+  {
+   "a": "bed",
+   "b": "tohatita"
+  },
+  {
+   "a": "skewd",
+   "b": "takuta"
+  },
+  {
+   "a": "tek",
+   "b": "mokta"
+  },
+  {
+   "a": "sme",
+   "b": "toksuom"
+  },
+  {
+   "a": "hews",
+   "b": "pakta"
+  },
+  {
+   "a": "terh",
+   "b": "nomokata"
+  },
+  {
+   "a": "somhs",
+   "b": "horro"
+  },
+  {
+   "a": "gerh",
+   "b": "kurein"
+  },
+  {
+   "a": "smeyt",
+   "b": "tontita"
+  },
+  {
+   "a": "per",
+   "b": "apso"
+  },
+  {
+   "a": "wdmti",
+   "b": "sumur"
+  },
+  {
+   "a": "seng",
+   "b": "turop"
+  },
+  {
+   "a": "ses",
+   "b": "sumpo"
+  },
+  {
+   "a": "ti",
+   "b": "nomo"
+  },
+  {
+   "a": "lewk",
+   "b": "tota"
+  },
+  {
+   "a": "gem",
+   "b": "tuta"
+  },
+  {
+   "a": "swep",
+   "b": "kumnara"
+  },
+  {
+   "a": "ger",
+   "b": "hutta"
+  },
+  {
+   "a": "es",
+   "b": "panur"
+  },
+  {
+   "a": "per",
+   "b": "pitu"
+  },
+  {
+   "a": "gmt",
+   "b": "papta"
+  },
+  {
+   "a": "he",
+   "b": "uoti"
+  },
+  {
+   "a": "sh",
+   "b": "kuno"
+  },
+  {
+   "a": "kemh",
+   "b": "hu"
+  },
+  {
+   "a": "speyk",
+   "b": "taktakuri"
+  },
+  {
+   "a": "sps",
+   "b": "supai"
+  },
+  {
+   "a": "nem",
+   "b": "kupurotita"
+  },
+  {
+   "a": "sterb",
+   "b": "paruta"
+  },
+  {
+   "a": "se",
+   "b": "putturta"
+  },
+  {
+   "a": "nptih",
+   "b": "sonno"
+  },
+  {
+   "a": "heh",
+   "b": "topta"
+  },
+  {
+   "a": "otwos",
+   "b": "otopte"
+  },
+  {
+   "a": "derb",
+   "b": "tatta"
+  },
+  {
+   "a": "tum",
+   "b": "tuton"
+  },
+  {
+   "a": "mesg",
+   "b": "tipta"
+  },
+  {
+   "a": "helg",
+   "b": "turta"
+  },
+  {
+   "a": "kap",
+   "b": "patta"
+  },
+  {
+   "a": "heys",
+   "b": "tatta"
+  },
+  {
+   "a": "gru",
+   "b": "patta"
+  },
+  {
+   "a": "teng",
+   "b": "tumtikhata"
+  },
+  {
+   "a": "syewh",
+   "b": "kipta"
+  },
+  {
+   "a": "ps",
+   "b": "tu"
+  },
+  {
+   "a": "steyg",
+   "b": "sota"
+  },
+  {
+   "a": "plewk",
+   "b": "tuta"
+  },
+  {
+   "a": "ers",
+   "b": "pokunhata"
+  },
+  {
+   "a": "grem",
+   "b": "pururunkorita"
+  },
+  {
+   "a": "ber",
+   "b": "kom"
+  },
+  {
+   "a": "ds",
+   "b": "orun"
+  },
+  {
+   "a": "gew",
+   "b": "nat"
+  },
+  {
+   "a": "swstos",
+   "b": "osotte"
+  },
+  {
+   "a": "mer",
+   "b": "purotita"
+  },
+  {
+   "a": "tinhti",
+   "b": "tonru"
+  },
+  {
+   "a": "sept",
+   "b": "irkop"
+  },
+  {
+   "a": "seh",
+   "b": "amteti"
+  },
+  {
+   "a": "kweth",
+   "b": "tuta"
+  },
+  {
+   "a": "ter",
+   "b": "puturopta"
+  },
+  {
+   "a": "npts",
+   "b": "toka"
+  },
+  {
+   "a": "pelh",
+   "b": "opta"
+  },
+  {
+   "a": "kap",
+   "b": "mori"
+  },
+  {
+   "a": "swerd",
+   "b": "toroum"
+  },
+  {
+   "a": "sper",
+   "b": "hutta"
+  },
+  {
+   "a": "steyh",
+   "b": "kontiktota"
+  },
+  {
+   "a": "mer",
+   "b": "opta"
+  },
+  {
+   "a": "peh",
+   "b": "totputita"
+  },
+  {
+   "a": "slos",
+   "b": "nup"
+  },
+  {
+   "a": "budmn",
+   "b": "mit"
+  },
+  {
+   "a": "sten",
+   "b": "kun"
+  },
+  {
+   "a": "logyeti",
+   "b": "nohta"
+  },
+  {
+   "a": "ser",
+   "b": "konurita"
+  },
+  {
+   "a": "der",
+   "b": "kutseta"
+  },
+  {
+   "a": "mos",
+   "b": "parri"
+  },
+  {
+   "a": "hstr",
+   "b": "suta"
+  },
+  {
+   "a": "hlwderos",
+   "b": "tauropta"
+  },
+  {
+   "a": "otw",
+   "b": "otop"
+  },
+  {
+   "a": "lewk",
+   "b": "tantantero"
+  },
+  {
+   "a": "sperh",
+   "b": "kototata"
+  }
+ ]
 }

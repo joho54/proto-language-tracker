@@ -87,11 +87,14 @@ def sim(a, b):
 def sample(rows, n):
     rows = rows[:]; random.shuffle(rows); return rows[:n]
 
-def preset(rows, pid, label, kind, langA, langB, note):
-    return dict(id=pid, label=label, kind=kind, langA=langA, langB=langB,
-                n=len(rows), nperm=NPERM, horizon=HORIZON,
-                pairs=[{"concept": r["concept"], "a_raw": r["a_raw"], "b_raw": r["b_raw"],
-                        "a": r["a"], "b": r["b"]} for r in rows], note=note)
+def preset(rows, pid, label, kind, langA, langB, note, proper=None):
+    d = dict(id=pid, label=label, kind=kind, langA=langA, langB=langB,
+             n=len(rows), nperm=NPERM, horizon=HORIZON,
+             pairs=[{"concept": r["concept"], "a_raw": r["a_raw"], "b_raw": r["b_raw"],
+                     "a": r["a"], "b": r["b"]} for r in rows], note=note)
+    if proper is not None:   # cherry: 선택 안 한 전체 모집단(proper null 시연용)
+        d["proper"] = [{"a": r["a"], "b": r["b"]} for r in proper]
+    return d
 
 def main():
     log("Korean 로딩…")
@@ -114,10 +117,12 @@ def main():
                "Unrelated control · Korean ↔ Uralic", "control", "proto-Uralic", "Korean",
                "Korean vs an UNRELATED but typologically similar family. If it scores like Korean-Japanese, the signal is typology, not kinship."))
     ie = korean_vs_proto(ko_all, catalog, KA / "protoindoeuropean.jsonl", strip_sino=True)
+    ie_full = sample(ie, BAKE)                       # 선택 안 한 모집단 = proper null
     ie.sort(key=lambda r: -sim(r["a"], r["b"]))
     add(preset(ie[:40], "cherry-lookalike",
                "Cherry-picked lookalikes (a trap)", "cherry", "proto-Indo-European", "Korean",
-               "Unrelated (IE) pairs, but keeping only the ones that LOOK similar. p can drop — but it's an artifact of post-hoc selection."))
+               "Unrelated (IE) pairs, but keeping only the ones that LOOK similar. The test 'detects' — but that's the trap: the signal is the selection, not the languages.",
+               proper=ie_full))
 
     (OUT / "index.json").write_text(json.dumps({"presets": presets}, ensure_ascii=False, indent=1), encoding="utf-8")
     log(f"[완료] {len(presets)} 프리셋")

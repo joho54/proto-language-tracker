@@ -207,19 +207,32 @@ function drawNull(vals, obs, p, done, total) {
 }
 
 function renderVerdict(d, mi, p) {
-  const verdict = d.n < d.horizon ? 'BELOW_HORIZON' : (p < 0.05 ? 'DETECTED' : 'FLOOR');
-  const txt = { DETECTED: 'Signal beats chance', FLOOR: 'Lost in the noise', BELOW_HORIZON: 'Too few cognates to tell' }[verdict];
-  const flag = d.kind === 'cherry' ? ' cherry-flag' : '';
+  const detected = p < 0.05;
+  let verdict = d.n < d.horizon ? 'BELOW_HORIZON' : (detected ? 'DETECTED' : 'FLOOR');
+  let cls = verdict, badge = verdict.replace('_', ' ');
+  let txt = { DETECTED: 'Signal beats chance', FLOOR: 'Lost in the noise', BELOW_HORIZON: 'Too few cognates to tell' }[verdict];
   let caveat = '';
-  if ((d.kind === 'claim' || d.kind === 'control') && Math.abs(p - 0.05) < 0.04)
+  if (d.kind === 'cherry' && detected) {            // the trap: "detected" is a FALSE positive
+    cls = 'TRAP'; badge = 'FALSE POSITIVE'; txt = 'The test was fooled';
+  } else if ((d.kind === 'claim' || d.kind === 'control') && Math.abs(p - 0.05) < 0.04) {
     caveat = `<div class="note">⚠ p sits right on the 0.05 line — a coin-flip. Hit "re-run the shuffles": the label wobbles. That's why one "p &lt; 0.05" proves nothing here.</div>`;
+  }
   SUMMARY[d.id] = { mi, p };
-  $('#verdict').innerHTML = `<div class="vcard ${verdict}${flag}">
-    <div class="badge">${esc(verdict.replace('_', ' '))}</div>
+  let recovery = '';
+  if (d.kind === 'cherry' && d.proper) {            // remove the cherry-picking → it vanishes
+    const pr = quickPval(d.proper.map(x => [x.a, x.b]), 400, 999);
+    recovery = `<div class="vcard FLOOR" style="margin-top:10px">
+      <div class="badge">PROPER TEST · no cherry-picking</div>
+      <div class="big">…and it's gone</div>
+      <div class="stats"><span>MI <b>${pr.mi.toFixed(3)}</b></span><span>p <b>${pr.p.toFixed(3)}</b></span><span>pairs <b>${d.proper.length}</b></span></div>
+      <div class="note">Same unrelated family, but <b>all</b> ${d.proper.length} pairs — no selecting for lookalikes. The "signal" collapses back to the floor. It was the <i>selection</i> all along, not the languages.</div></div>`;
+  }
+  $('#verdict').innerHTML = `<div class="vcard ${cls}">
+    <div class="badge">${esc(badge)}</div>
     <div class="big">${esc(txt)}</div>
     <div class="stats"><span>MI <b>${mi.toFixed(3)}</b></span><span>p <b>${p.toFixed(3)}</b></span>
       <span>cognates <b>${d.n}</b> <small>(horizon ~${d.horizon})</small></span></div>
-    <div class="note">${esc(d.note)}</div>${caveat}</div>`;
+    <div class="note">${esc(d.note)}</div>${caveat}</div>${recovery}`;
   renderContrast();
 }
 
@@ -227,11 +240,13 @@ function renderContrast() {
   const grid = $('#contrast-grid'); grid.innerHTML = '';
   ORDER.forEach(id => {
     const d = PRESETS[id], su = SUMMARY[id] || {};
-    const verdict = (su.p ?? 1) < 0.05 ? 'DETECTED' : 'FLOOR';
+    const detected = (su.p ?? 1) < 0.05;
+    const cls = (d.kind === 'cherry' && detected) ? 'TRAP' : (detected ? 'DETECTED' : 'FLOOR');
+    const vlabel = cls === 'TRAP' ? 'FALSE POS' : cls;
     const c = el('div', 'ccard clickable'); c.dataset.kind = d.kind;
     c.innerHTML = `<div class="cl">${esc(d.label)}</div>
       <div class="cv">MI ${(su.mi ?? 0).toFixed(2)} · p ${(su.p ?? 0).toFixed(3)} · N ${d.n}</div>
-      <div class="cverd ${verdict}">${verdict}</div>`;
+      <div class="cverd ${cls}">${vlabel}</div>`;
     c.onclick = () => select(id);
     grid.appendChild(c);
   });

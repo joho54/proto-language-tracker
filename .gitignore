@@ -11,3 +11,7 @@ poc/results/wikt_cache/
 poc/results/wikt_cache2/
 
 # Keep: poc/results/*.tsv (small experiment outputs)
+
+# Reference/scraped data (regenerable via scripts: kaikki.py, poc21_scrape.py, Baxter-Sagart download)
+data/asjp/
+data/pjaponic/

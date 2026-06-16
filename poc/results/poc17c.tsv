@@ -1,0 +1,9 @@
+source	claim	condition	N_pairs	MI	p_value	verdict
+Japonic	★주장(Robbeets Koreanic↔Japonic)	naive	414	0.4296	0.3748	무유의
+Japonic	★주장(Robbeets Koreanic↔Japonic)	typed	287	0.5185	0.0505	무유의
+Turkic	Transeurasian 공동주장(참고)	naive	761	0.3944	0.4318	무유의
+Turkic	Transeurasian 공동주장(참고)	typed	522	0.4567	0.7496	무유의
+Uralic	음성대조(Koreanic-Uralic 주장 없음)	naive	423	0.4410	0.0230	유의
+Uralic	음성대조(Koreanic-Uralic 주장 없음)	typed	309	0.4960	0.0530	무유의
+IndoEuro	음성대조(명백 무관)	naive	896	0.2932	0.4928	무유의
+IndoEuro	음성대조(명백 무관)	typed	594	0.3174	0.4238	무유의

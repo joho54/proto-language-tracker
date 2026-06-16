@@ -1,0 +1,5 @@
+signal	auc	f1	precision	recall
+sino_frac	0.7905	0.9361	0.9227	0.9499
+all_syllable_sino		0.9360	0.9228	0.9495
+fused	0.9036	0.9383	0.9187	0.9587
+# catalog=465 N=15781 sino_ratio=0.8257

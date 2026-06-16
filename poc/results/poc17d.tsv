@@ -1,0 +1,4 @@
+condition	N_pairs	MI	p_value	verdict
+naive(전체)	700	0.9206	0.0010	유의
+sino-only(양쪽한어)	700	0.7569	0.0010	유의
+native-only(typed)	700	1.0229	0.0010	유의

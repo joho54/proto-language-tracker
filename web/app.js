@@ -159,9 +159,9 @@ async function runPermutation(d, pairs, obs, my) {
     const Bs = shuffled(B, Math.random);
     const mi = mutualInfo(A.map((a, i) => [a, Bs[i]]));
     nulls.push(mi); if (mi >= obs) ge++;
-    if (k % 4 === 0 || k === nperm - 1) {
+    if (k % 2 === 0 || k === nperm - 1) {
       drawNull(nulls, obs, (ge + 1) / (k + 2), k + 1, nperm);
-      await new Promise(requestAnimationFrame);
+      await sleep(26);          // ~250 draws × 26ms ≈ 6.5s (slower, watchable)
     }
   }
   const p = (ge + 1) / (nperm + 1);

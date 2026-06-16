@@ -1,0 +1,4 @@
+test	value	note
+doublet_pair	0.6238	OSV<SV score 비율(0.5=무신호)
+supervised_thr_F1	0.5219	최적임계 상한
+unsup_gmm_F1	0.4456	1D 2-mode 카탈로그이탈

@@ -1,0 +1,96 @@
+<!doctype html><html lang=ko><head><meta charset=utf-8>
+<title>POC-22 — Sino-Vietnamese 시대층 비지도 분해</title>
+<style>
+:root{--ink:#1a202c;--mut:#5a6478;--line:#e2e8f0;--bg:#fafbfc;--card:#fff}
+*{box-sizing:border-box} body{font:15px/1.65 -apple-system,'Helvetica Neue',sans-serif;color:var(--ink);background:var(--bg);margin:0;padding:0 16px 80px}
+.wrap{max-width:860px;margin:0 auto}
+header{padding:38px 0 18px;border-bottom:2px solid var(--ink)}
+h1{font-size:25px;margin:0 0 6px} .sub{color:var(--mut);font-size:14px}
+.verdict{display:inline-block;background:#1c7a4a;color:#fff;font-weight:700;font-size:12px;padding:3px 10px;border-radius:4px;letter-spacing:.04em}
+.verdict.weak{background:#b7791f}
+h2{font-size:18px;margin:34px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+h2 .n{color:#b7791f;font-weight:800;margin-right:8px}
+p{margin:8px 0} .mut{color:var(--mut)} b{color:#000}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.chart{width:100%;height:auto;display:block;margin:6px 0}
+.grid{stroke:#eef1f5;stroke-width:1} .ytick,.xtick,.xtick2{fill:var(--mut);font-size:11px;text-anchor:middle}
+.ytick{text-anchor:end} .xtick2{font-size:10px;white-space:pre} .barval{fill:var(--ink);font-size:12px;font-weight:700;text-anchor:middle}
+.baseline{stroke:#e53e3e;stroke-dasharray:5 4;stroke-width:1.5} .baselbl{fill:#e53e3e;font-size:11px}
+.legend{display:flex;gap:18px;font-size:13px;margin:4px 0 0} .legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0}
+td,th{border:1px solid var(--line);padding:5px 9px;text-align:left} th{background:#f4f6f9;font-weight:600}
+.han{font-size:18px;text-align:center} .mc{font-family:ui-monospace,monospace;color:var(--mut)}
+.osvf{color:#d9772b;font-weight:700} .svf{color:#2b6cb0;font-weight:700}
+.kpi{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+.kpi div{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.kpi .v{font-size:22px;font-weight:800} .kpi .l{font-size:12px;color:var(--mut)}
+.flag{border-left:3px solid #b7791f;background:#fffbf0;padding:8px 12px;margin:10px 0;font-size:14px}
+.lvl{font-size:14px;margin:4px 0;padding-left:4px} code{background:#f0f2f5;padding:1px 5px;border-radius:3px;font-size:13px}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);color:var(--mut);font-size:12px}
+</style></head><body><div class=wrap>
+
+<header>
+<h1>POC-22 · Sino-Vietnamese 시대층 비지도 분해</h1>
+<div class=sub>한 공여어(중국어)의 <b>여러 시대 차용층</b>(古漢越 OSV / 漢越 SV-proper)을 대응규칙 클러스터로 분리 · 2026-06-16</div>
+<div style="margin-top:10px"><span class=verdict>문제: OPEN</span> &nbsp; <span class="verdict weak">22a 검증: 약함(부분)</span></div>
+</header>
+
+<h2><span class=n>§1</span>문제 정체 — 왜 열린 문제인가</h2>
+<p>기존 계산적 차용연구는 <b>이진 탐지</b>(차용이냐 토착이냐)거나 기껏 <b>어느 공여어냐</b>까지다. 빈 자리는 —
+<b>같은 공여어의 어느 <u>시대</u>냐</b>. 베트남어 한자어는 전부 중국어지만 여러 시대 파도로 들어와 <b>시대마다 음대응이 다르다.</b></p>
+<div class=card>
+<p style="margin:0 0 6px"><b>시대층 분리의 세 수준</b> — 우리 기여는 수준3</p>
+<div class=lvl>① <b>정성 문헌학</b>(손으로): Wang Li·Alves·Phan — <b>풍부히 존재</b>(=SETTLED, validation gold)</div>
+<div class=lvl>② <b>지도 계산</b>(층위 미리 라벨→모델): Ito/Kenstowicz(일본어) — 드묾</div>
+<div class=lvl>③ <b>비지도 계산</b>(기계가 층위 <b>스스로 발견</b>): <b>어느 언어쌍서도 전무</b> ← 우리</div>
+</div>
+<p class=mut>deep-research(100 에이전트·24/25 주장 3-0): LexStat·List 2019·List&amp;Forkel·Miller&amp;List 2023·Wientzek 2025 모두
+이진 탐지/계승 클러스터뿐 — same-donor 다층 비지도 분해는 없음. Sino-Japanese·Sino-Korean도 확인. <b>판정: OPEN.</b></p>
+
+<h2><span class=n>§2</span>데이터 계약 — gold·신호 모두 보유</h2>
+<div class=kpi>
+<div><div class=v>529</div><div class=l>OSV gold (Non-SV 태그)</div></div>
+<div><div class=v>1428</div><div class=l>SV-proper 단음절</div></div>
+<div><div class=v>4056</div><div class=l>Baxter-Sagart MC 자</div></div>
+<div><div class=v>외부0</div><div class=l>다운로드 불요</div></div>
+</div>
+<p>cross-stratum <b>doublet</b>(한 한자→OSV형/SV형)이 정찰이 말한 <i>비지도 최강 신호</i>. 각 형태의 출처 한자를 Baxter-Sagart MC에 연결해 <b>MC→Viet 대응</b>을 측정한다.</p>
+<table><tr><th>한자</th><th>중고음(MC)</th><th>OSV 형</th><th>SV-proper 형</th></tr><tr><td class=han>印</td><td class=mc>&#x27;jinH</td><td class=osvf>in</td><td class=svf>ấn</td></tr><tr><td class=han>諫</td><td class=mc>kaenH</td><td class=osvf>can</td><td class=svf>gián</td></tr><tr><td class=han>萬</td><td class=mc>mjonH</td><td class=osvf>man</td><td class=svf>vạn</td></tr><tr><td class=han>澳</td><td class=mc>&#x27;awH</td><td class=osvf>ao</td><td class=svf>áo</td></tr><tr><td class=han>我</td><td class=mc>ngaX</td><td class=osvf>qua</td><td class=svf>ngã</td></tr><tr><td class=han>散</td><td class=mc>sanX</td><td class=osvf>tan</td><td class=svf>tán</td></tr><tr><td class=han>信</td><td class=mc>sinH</td><td class=osvf>tin</td><td class=svf>tín</td></tr><tr><td class=han>邊</td><td class=mc>pen</td><td class=osvf>ven</td><td class=svf>biên</td></tr><tr><td class=han>炭</td><td class=mc>thanH</td><td class=osvf>than</td><td class=svf>thán</td></tr><tr><td class=han>嘆</td><td class=mc>thanH</td><td class=osvf>than</td><td class=svf>thán</td></tr><tr><td class=han>熏</td><td class=mc>xjun</td><td class=osvf>hun</td><td class=svf>huân</td></tr><tr><td class=han>碑</td><td class=mc>pje</td><td class=osvf>bia</td><td class=svf>bi</td></tr></table>
+
+<h2><span class=n>§3</span>★ 핵심 신호 — 시대층은 <u>측정 가능하게</u> 다른 대응 시스템</h2>
+<p>MC <b>去聲</b>(qusheng) → 베트남 성조 분포. <b>SV-proper는 sắc/nặng에 집중</b>(규칙적 대응), <b>OSV는 평평</b>(차용 시점이 일러 성조정렬 전) — Alves가 손으로 쓰는 <i>성조 역전</i> 진단이 수치화된 것.</p>
+<div class=card>
+<div class=legend><span><i style="background:#d9772b"></i>OSV 古漢越 (n=158)</span><span><i style="background:#2b6cb0"></i>SV-proper 漢越 (n=285)</span></div>
+<svg viewBox="0 0 560 240" class="chart"><line x1="46" y1="200" x2="546" y2="200" class="grid"/><text x="40" y="203" class="ytick">0</text><line x1="46" y1="154" x2="546" y2="154" class="grid"/><text x="40" y="157" class="ytick">25</text><line x1="46" y1="108" x2="546" y2="108" class="grid"/><text x="40" y="111" class="ytick">50</text><line x1="46" y1="62" x2="546" y2="62" class="grid"/><text x="40" y="65" class="ytick">75</text><line x1="46" y1="16" x2="546" y2="16" class="grid"/><text x="40" y="19" class="ytick">100</text><rect x="61.0" y="148.8" width="28.8" height="51.2" fill="#d9772b"><title>OSV (古漢越) ngang: 28%</title></rect><rect x="93.1" y="196.8" width="28.8" height="3.2" fill="#2b6cb0"><title>SV-proper (漢越) ngang: 2%</title></rect><text x="88" y="216" class="xtick">ngang</text><rect x="144.3" y="149.9" width="28.8" height="50.1" fill="#d9772b"><title>OSV (古漢越) huyền: 27%</title></rect><rect x="176.4" y="196.1" width="28.8" height="3.9" fill="#2b6cb0"><title>SV-proper (漢越) huyền: 2%</title></rect><text x="171" y="216" class="xtick">huyền</text><rect x="227.7" y="177.9" width="28.8" height="22.1" fill="#d9772b"><title>OSV (古漢越) sắc: 12%</title></rect><rect x="259.7" y="103.8" width="28.8" height="96.2" fill="#2b6cb0"><title>SV-proper (漢越) sắc: 52%</title></rect><text x="254" y="216" class="xtick">sắc</text><rect x="311.0" y="176.7" width="28.8" height="23.3" fill="#d9772b"><title>OSV (古漢越) hỏi: 13%</title></rect><rect x="343.1" y="196.8" width="28.8" height="3.2" fill="#2b6cb0"><title>SV-proper (漢越) hỏi: 2%</title></rect><text x="338" y="216" class="xtick">hỏi</text><rect x="394.3" y="177.9" width="28.8" height="22.1" fill="#d9772b"><title>OSV (古漢越) ngã: 12%</title></rect><rect x="426.4" y="195.5" width="28.8" height="4.5" fill="#2b6cb0"><title>SV-proper (漢越) ngã: 2%</title></rect><text x="421" y="216" class="xtick">ngã</text><rect x="477.7" y="184.9" width="28.8" height="15.1" fill="#d9772b"><title>OSV (古漢越) nặng: 8%</title></rect><rect x="509.7" y="127.0" width="28.8" height="73.0" fill="#2b6cb0"><title>SV-proper (漢越) nặng: 40%</title></rect><text x="504" y="216" class="xtick">nặng</text></svg>
+<p class=mut style="margin:2px 0 0">x=베트남 성조, y=MC去聲 항목 중 %. SV 92%가 sắc+nặng vs OSV 분산.</p>
+</div>
+
+<h2><span class=n>§4</span>검증 결과 (POC-22a) — 정직하게 약함</h2>
+<p>feature = <b>MC↔Viet 대응</b>(성조쌍·onset류·유성성). 구조는 POC-17a 따름: 지도 상한 → 비지도 복원.</p>
+<div class=card><svg viewBox="0 0 560 210" class="chart"><line x1="46" y1="156" x2="546" y2="156" class="grid"/><text x="40" y="159" class="ytick">0.00</text><line x1="46" y1="121" x2="546" y2="121" class="grid"/><text x="40" y="124" class="ytick">0.25</text><line x1="46" y1="86" x2="546" y2="86" class="grid"/><text x="40" y="89" class="ytick">0.50</text><line x1="46" y1="51" x2="546" y2="51" class="grid"/><text x="40" y="54" class="ytick">0.75</text><line x1="46" y1="16" x2="546" y2="16" class="grid"/><text x="40" y="19" class="ytick">1.00</text><line x1="46" y1="86" x2="546" y2="86" class="baseline"/><text x="546" y="82" class="baselbl" text-anchor="end">chance 0.50</text><rect x="79" y="74" width="100" height="82" fill="#6b46c1"/><text x="129" y="69" class="barval">0.59</text><text x="129" y="172" class="xtick2">지도 NB
+(상한)</text><rect x="246" y="156" width="100" height="0" fill="#d9772b"/><text x="296" y="151" class="barval">0.00</text><text x="296" y="172" class="xtick2">비지도 EM
+(자연불균형)</text><rect x="413" y="85" width="100" height="71" fill="#2b6cb0"/><text x="463" y="80" class="barval">0.51</text><text x="463" y="172" class="xtick2">비지도 EM
+(균형)</text></svg>
+<p class=mut style="margin:2px 0 0">OSV 검출 F1. 빨간 점선 = 균형셋 우연(0.5).</p></div>
+<div class=flag>
+<b>판정: 신호는 실재하나 약하고, 비지도 복원은 실패.</b><br>
+· <b>지도 상한 F1 0.59</b> — 대응 feature에 층위 신호 <b>있음</b>(우연 0.27↑). 단 Sino-Korean SV/native의 0.95와 달리 <b>훨씬 낮음</b> = OSV/SV-proper는 <i>둘 다 중국어</i>라 더 미묘한 구분.<br>
+· <b>비지도 EM: 자연불균형 0.00(붕괴) / 균형 0.51≈우연</b> — 현 feature 입도(4토큰)·단순 다항혼합으론 <b>층위 복원 못 함</b>. (BIC는 2-mode 선호하나 분리축이 시대층이 아님.)
+</div>
+
+<h2><span class=n>§5</span>정직한 판정 &amp; 다음</h2>
+<p><b>22a는 de-risk 임무를 했다 — "쉬운 비지도 분해는 부족하다"를 밝혔다.</b> 층위는 분리가능한 신호를 갖지만(지도 0.59), naive 비지도로는 안 풀린다. 이는 POC-17a 교훈(불균형 붕괴)에 <b>새 교훈</b>을 더한다: <i>거친 대응 토큰으론 미묘한 동일-공여어 층위를 못 가른다.</i></p>
+<div class=card>
+<p style="margin:0 0 4px"><b>다음(22b 전 보강)</b></p>
+<div class=lvl>· feature 정밀화: 성조×onset×rhyme <b>전체 대응표</b>(현재 4토큰 → 전체 MC→Viet 대응 행렬)</div>
+<div class=lvl>· 불균형 보정: M1 카탈로그-끌림(POC-15/17a-fix) — Sino-Korean서 0.78→0.94로 구원한 도구</div>
+<div class=lvl>· doublet 우선: 같은 한자 OSV/SV 쌍은 <i>대응차가 순수 분리</i>(어휘·의미 통제) → 최강 신호부터</div>
+</div>
+<p class=mut>성공기준은 양성이 아니라 <b>도구 신뢰 획득</b>: 보강 후 비지도가 gold를 따라가면 → 22b(논쟁 가장자리·Phan AMC에 정직 CI)로. 아니면 한계를 정직히 보고.</p>
+
+<footer>
+POC-22 아크 · 데이터 <code>data/kaikki/vietnamese.jsonl</code> · <code>data/pjaponic/baxtersagart.tsv</code> ·
+코드 <code>poc/poc22a_validate.py</code> · 생성 <code>poc/poc22_report.py</code>.
+선행연구 정찰 = deep-research(별도). 본 리포트는 데이터에서 재계산.
+</footer>
+</div></body></html>

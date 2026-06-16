@@ -1,0 +1,4 @@
+method	F1	P	R	note
+supervised_NB	0.5874	0.7428	0.4858	상한(대응feature)
+unsup_EM_natural	0.0000	0.0000	0.0000	불균형529/1428
+unsup_EM_balanced	0.5060	0.5421	0.4745	균형

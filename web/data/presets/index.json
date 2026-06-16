@@ -1,0 +1,28 @@
+{
+ "presets": [
+  {
+   "id": "confirmed-gmc",
+   "label": "확정 동계어 · 영어↔독일어",
+   "kind": "confirmed",
+   "file": "confirmed-gmc.json"
+  },
+  {
+   "id": "kor-jpn-native",
+   "label": "한국어 ↔ 일본어 (고유어)",
+   "kind": "claim",
+   "file": "kor-jpn-native.json"
+  },
+  {
+   "id": "unrelated-uralic",
+   "label": "무관 대조군 · 한국어 ↔ Uralic",
+   "kind": "control",
+   "file": "unrelated-uralic.json"
+  },
+  {
+   "id": "cherry-lookalike",
+   "label": "체리픽 함정 · 무관쌍의 lookalike만",
+   "kind": "cherry",
+   "file": "cherry-lookalike.json"
+  }
+ ]
+}

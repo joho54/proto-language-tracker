@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why You Can't Uncover the Proto-Language</title>
+<meta name="description" content="An interactive falsifier — watch a machine try (and mostly fail) to tell deep language kinship from coincidence.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Why You <em>Can't</em> Uncover the Proto-Language</h1>
+    <p class="tagline">An interactive <b>falsifier</b>. Pick two languages, and watch a machine decide whether
+    their resemblance beats chance. Spoiler: it usually can't tell real kinship from coincidence — and that's the point.</p>
+  </header>
+
+  <!-- preset picker -->
+  <section id="picker">
+    <div class="picker-label">Pick a comparison →</div>
+    <div id="preset-buttons"></div>
+  </section>
+
+  <main id="stage" hidden>
+
+    <div class="now">
+      <span id="now-label"></span>
+      <span class="langs"><b id="lang-a"></b> <span class="vs">vs</span> <b id="lang-b"></b></span>
+    </div>
+
+    <!-- 1. pairs -->
+    <section class="step">
+      <h2><span class="n">1</span> Concept-aligned word pairs</h2>
+      <p class="hint">Same meaning, two languages. Do the sounds line up — or do they just <i>look</i> alike?</p>
+      <div id="pairs" class="pairs"></div>
+      <p class="meta"><span id="pairs-n"></span> pairs used (showing first <span id="pairs-shown"></span>).</p>
+    </section>
+
+    <!-- 2. alignment -->
+    <section class="step">
+      <h2><span class="n">2</span> Segment alignment</h2>
+      <p class="hint">Each pair is aligned sound-by-sound (Needleman–Wunsch). Empty cell = a gap (insertion/deletion).</p>
+      <div id="align"></div>
+    </section>
+
+    <!-- 3. matrix -->
+    <section class="step">
+      <h2><span class="n">3</span> Sound-correspondence table <span class="formula">P(x,y)</span></h2>
+      <p class="hint">Tally which sound of A maps to which sound of B. A real relationship makes this <i>peaky</i>; chance makes it flat.</p>
+      <div id="matrix"></div>
+    </section>
+
+    <!-- 4. MI -->
+    <section class="step">
+      <h2><span class="n">4</span> Collapse to one number: Mutual Information</h2>
+      <p class="hint">How much does knowing A's sound tell you about B's? The whole table, squeezed into a scalar.</p>
+      <div id="mi" class="mi-box"></div>
+    </section>
+
+    <!-- 5. permutation null -->
+    <section class="step">
+      <h2><span class="n">5</span> Is it more than chance? Permutation test</h2>
+      <p class="hint">Shuffle the pairings <span id="nperm"></span>× and re-measure. If the real MI hides inside the shuffled
+      cloud, the "signal" is just luck. <b>p</b> = fraction of shuffles that beat the real value.</p>
+      <div id="null"></div>
+      <button id="reshuffle" class="btn-ghost">↻ re-run the shuffles</button>
+    </section>
+
+    <!-- 6. verdict -->
+    <section class="step">
+      <h2><span class="n">6</span> Verdict</h2>
+      <div id="verdict"></div>
+    </section>
+
+  </main>
+
+  <!-- contrast -->
+  <section id="contrast">
+    <h2>The punchline — all four, side by side</h2>
+    <p class="hint">A confirmed relationship (English–German) lights up. But Korean–Japanese sits at the same
+    razor's edge as an <b>unrelated</b> control (Uralic) — and a <b>cherry-picked</b> set of lookalikes "passes"
+    while being pure coincidence. That's why you can't just eyeball deep kinship.</p>
+    <div id="contrast-grid"></div>
+  </section>
+
+  <footer>
+    <p>Every number here is the <b>real</b> pipeline output (no mockups): segment alignment + mutual information +
+    permutation null, run over Wiktionary-derived word lists. Part of <code>proto-language-tracker</code>.
+    Method &amp; full write-up: <code>docs/study_report.html</code>.</p>
+    <p class="fine">Word lists derive from Wiktionary (CC BY-SA). Confirmed cognates via Proto-Germanic descendants;
+    Korean/Japonic/Uralic/IE via kaikki.org dumps. "Cherry-picked" = unrelated pairs sorted by surface similarity,
+    shown to demonstrate the selection trap.</p>
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -2,25 +2,25 @@
  "presets": [
   {
    "id": "confirmed-gmc",
-   "label": "확정 동계어 · 영어↔독일어",
+   "label": "Confirmed cognates · English ↔ German",
    "kind": "confirmed",
    "file": "confirmed-gmc.json"
   },
   {
    "id": "kor-jpn-native",
-   "label": "한국어 ↔ 일본어 (고유어)",
+   "label": "Korean ↔ Japanese (native layer)",
    "kind": "claim",
    "file": "kor-jpn-native.json"
   },
   {
    "id": "unrelated-uralic",
-   "label": "무관 대조군 · 한국어 ↔ Uralic",
+   "label": "Unrelated control · Korean ↔ Uralic",
    "kind": "control",
    "file": "unrelated-uralic.json"
   },
   {
    "id": "cherry-lookalike",
-   "label": "체리픽 함정 · 무관쌍의 lookalike만",
+   "label": "Cherry-picked lookalikes (a trap)",
    "kind": "cherry",
    "file": "cherry-lookalike.json"
   }

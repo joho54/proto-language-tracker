@@ -12,8 +12,9 @@
 
   <header>
     <h1>Why You <em>Can't</em> Uncover the Proto-Language</h1>
-    <p class="tagline">An interactive <b>falsifier</b>. Pick two languages, and watch a machine decide whether
-    their resemblance beats chance. Spoiler: it usually can't tell real kinship from coincidence — and that's the point.</p>
+    <p class="tagline">An interactive <b>falsifier</b> that <b>runs live in your browser</b>. Pick two languages and watch
+    the machine actually do it — align the sounds, build the table, compute the number, shuffle a few hundred times — then
+    decide whether the resemblance beats chance. Spoiler: it usually can't tell real kinship from coincidence. That's the point.</p>
   </header>
 
   <!-- preset picker -->
@@ -85,12 +86,13 @@
   </section>
 
   <footer>
-    <p>Every number here is the <b>real</b> pipeline output (no mockups): segment alignment + mutual information +
-    permutation null, run over Wiktionary-derived word lists. Part of <code>proto-language-tracker</code>.
-    Method &amp; full write-up: <code>docs/study_report.html</code>.</p>
+    <p>Every number here is <b>computed live in your browser</b> — segment alignment (Needleman–Wunsch) + mutual information +
+    permutation null — over real Wiktionary-derived word lists. Only the word pairs are pre-fetched; the inference runs as you watch.
+    Part of <code>proto-language-tracker</code>. Method &amp; full write-up: <code>docs/study_report.html</code>.</p>
     <p class="fine">Word lists derive from Wiktionary (CC BY-SA). Confirmed cognates via Proto-Germanic descendants;
     Korean/Japonic/Uralic/IE via kaikki.org dumps. "Cherry-picked" = unrelated pairs sorted by surface similarity,
-    shown to demonstrate the selection trap.</p>
+    shown to demonstrate the selection trap. The browser alignment uses an <i>approximate</i> phonetic distance (a small
+    feature table, not full panphon), so MI values differ slightly from the offline Python pipeline — the contrast (confirmed ≫ claim ≈ control) is what's robust.</p>
   </footer>
 
 </div>

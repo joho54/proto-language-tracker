@@ -1,0 +1,61 @@
+============================================================
+POC-21 scrape: 삼국사기 권37 전체 지명 → denominator
+  [saved] ajax_sg_037r_0010.html (639B)
+섹션 sg_037r_0010: 0 items
+  [saved] ajax_sg_037r_0020.html (12913B)
+섹션 sg_037r_0020: 8 items
+  [saved] ajax_sg_037r_0030.html (17447B)
+섹션 sg_037r_0030: 11 items
+  [saved] ajax_sg_037r_0040.html (2182B)
+섹션 sg_037r_0040: 1 items
+  [saved] ajax_sg_037r_0050.html (8309B)
+섹션 sg_037r_0050: 5 items
+  [saved] ajax_sg_037r_0060.html (12841B)
+섹션 sg_037r_0060: 8 items
+  [saved] ajax_sg_037r_0070.html (2168B)
+섹션 sg_037r_0070: 1 items
+
+총 item 34개 수집 시작…
+  [saved] sg_037r_0020_0010.html (124664B)
+  [saved] sg_037r_0020_0020.html (115711B)
+  [saved] sg_037r_0020_0030.html (118835B)
+  [saved] sg_037r_0020_0040.html (105629B)
+  [saved] sg_037r_0020_0050.html (358309B)
+  진행 5/34
+  [saved] sg_037r_0020_0060.html (200801B)
+  [saved] sg_037r_0020_0070.html (167314B)
+  [saved] sg_037r_0020_0080.html (103454B)
+  [saved] sg_037r_0030_0010.html (102244B)
+  [saved] sg_037r_0030_0020.html (112591B)
+  진행 10/34
+  [saved] sg_037r_0030_0030.html (104527B)
+  [saved] sg_037r_0030_0040.html (109227B)
+  [saved] sg_037r_0030_0050.html (104359B)
+  [saved] sg_037r_0030_0060.html (125158B)
+  [saved] sg_037r_0030_0070.html (113426B)
+  진행 15/34
+  [saved] sg_037r_0030_0080.html (163057B)
+  [saved] sg_037r_0030_0090.html (154344B)
+  [saved] sg_037r_0030_0100.html (183364B)
+  [saved] sg_037r_0030_0110.html (104575B)
+  [saved] sg_037r_0040_0010.html (521100B)
+  진행 20/34
+  [saved] sg_037r_0050_0010.html (110310B)
+  [saved] sg_037r_0050_0020.html (121375B)
+  [saved] sg_037r_0050_0030.html (120619B)
+  [saved] sg_037r_0050_0040.html (108144B)
+  [saved] sg_037r_0050_0050.html (105281B)
+  진행 25/34
+  [saved] sg_037r_0060_0010.html (123840B)
+  [saved] sg_037r_0060_0020.html (109089B)
+  [saved] sg_037r_0060_0030.html (117210B)
+  [saved] sg_037r_0060_0040.html (111413B)
+  [saved] sg_037r_0060_0050.html (110445B)
+  진행 30/34
+  [saved] sg_037r_0060_0060.html (111295B)
+  [saved] sg_037r_0060_0070.html (116675B)
+  [saved] sg_037r_0060_0080.html (111886B)
+  [saved] sg_037r_0070_0010.html (110108B)
+
+[완료] 34 item 캐시 (data/pjaponic/sg37_cache/)
+→ 다음: poc21b 파싱(old↔new 지명쌍 + 형태소 글로스 추출)

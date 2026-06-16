@@ -1,0 +1,20 @@
+=== POC-20b: 두 독립 재구 Japonic cognate 교차일치 ===
+
+Set A (Baxter MC, Lee&Ramsey/Itabashi)  Japonic distinct : 8
+Set B (Pulleyblank EMC, Ulman)          Japonic distinct : 21
+  + 양면(J·K) 3, 문법형태소 5(Georg 위험지대)
+
+A∩B (두 재구 모두 = 견고 핵심) : 7   ['five', 'rabbit', 'seven', 'ten', 'three', 'valley', 'water']
+A only                        : 1   ['lead']
+B only                        : 14   ['bear', 'cattle', 'child', 'deep', 'enter', 'land', 'mountain', 'mouth', 'red', 'take', 'tree', 'water_deer', 'wave', 'willow']
+A∪B (최대주의)                : 22
+
+★ 정직한 CI = [견고 7 … 최대 22]  (지평 ~15–20쌍 기준)
+  - 견고 핵심 7 = 지평 밑 ✗
+  - 최대주의 22 = 지평 위 ✓
+  → 결론이 *재구 가정에 달림* = 바로 이 민감도가 우리가 잴 contested CI.
+
+Ulman 자체 집계(맥락): 130지명 중 26 강한 J-형태소 + 40 약한 = ~50%,
+  단 '투명한 J 지명도 미상 형태소(*xwət fort, *paʔi peak)로 끝남 → substrate 가능' (정직한 기권).
+
+[머지] 38행 → /Users/johyeonho/proto-language-tracker/poc/results/poc20b_merged.tsv

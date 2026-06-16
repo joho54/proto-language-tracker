@@ -1,0 +1,9 @@
+scope	lang	cov	covered	total	note
+all	Japonic	0.0000	0	75	수사포함
+all_noNum	Japonic	0.0000	0	75	수사제거
+all	Uralic	0.0000	0	75	수사포함
+all_noNum	Uralic	0.0000	0	75	수사제거
+all	Turkic	0.0133	1	75	수사포함
+all_noNum	Turkic	0.0133	1	75	수사제거
+region:sg_037r_0020	Delta	-0.0135	0	74	溟州(동해안)
+region:sg_037r_0070	Delta	0.0000	0	1	기타

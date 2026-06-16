@@ -1,0 +1,11 @@
+[cache] /Users/johyeonho/proto-language-tracker/data/pjaponic/wiki_glosses_raw.txt (17399B)
+
+[추출] 30행 → /Users/johyeonho/proto-language-tracker/poc/results/poc20_pjaponic.tsv
+
+=== 비교어족별 cognate 수 (소-N 벽 측정) ===
+  Koreanic   16
+  Japonic    10
+  Tungusic   4
+
+  ★ Japonic(=~3ky 노드 검정 분자) = 10개  / POC-6·11 지평 ~15–20쌍
+  → Koreanic/Tungusic은 *다른 가설*(계보 경쟁): 같은 셋이 세 어족에 분산

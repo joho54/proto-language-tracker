@@ -1,0 +1,27 @@
+[a] Baxter-Sagart MC 4056자, gloss 4056자; 한국한자음 폴백 3963자
+[b] 파싱 143쌍, 동일길이 정렬가능 75쌍
+    國原城→中原京: 國[kwok=center], 原[ngjwon=field], 城[dzyeng=hill]
+    南川縣→黃武縣: 南[nom=yellow], 川[tsyhwen=military]
+    駒城→巨黍縣: 駒[None=None], 城[dzyeng=panicum miliaceum]
+    述川郡→泝川郡: 述[zywit=go against current], 川[tsyhwen=river]
+    楊根縣→濱陽縣: 楊[yang=None], 根[kon=bright]
+    道西縣→都西縣: 道[daw=capital city], 西[sej=west]
+
+[c] 비교어 concept 수: Japonic 527 / Uralic 575 / Turkic 1175
+
+=== coverage (전체 286 정렬셋) ===
+  Japonic  cov=0.000 (0/75)   수사제거 0.000 (0/75)
+  Uralic   cov=0.000 (0/75)   수사제거 0.000 (0/75)
+  Turkic   cov=0.013 (1/75)   수사제거 0.013 (1/75)
+
+★ Δ(전체) = cov(Jap) − max(대조군) = 0.000 − 0.013 = -0.013
+
+의미-순열 null(Japonic): obs=0.000  null평균=0.005  p=1.0000
+
+=== 지역(섹션) 분해 — ②남부집중 vs ③균일 ===
+  sg_037r_0020 溟州(동해안)    N= 74  Jap=0.00 Ur=0.00 Tk=0.01  Δ=-0.01
+  sg_037r_0070 기타         N=  1  Jap=0.00 Ur=0.00 Tk=0.00  Δ=+0.00
+
+============================================================
+판정(1차): Δ=-0.013, null-p=1.0000 → ① floor(대조군과 구별불가)
+★ CI·최종판정은 지역 Δ 패턴(남부집중=② / 균일=③ / 무=①)과 함께. 산출=교정된 Δ±근사CI.

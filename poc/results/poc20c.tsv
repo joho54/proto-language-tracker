@@ -1,0 +1,3 @@
+set	N	MI	p_value	note
+robust(A∩B)	7	1.6495	0.0008	재구-견고 핵심; 전부 Swadesh = Georg 우연충돌 최고위험
+max(A∪B)	22	1.5731	0.0002	최대주의; B-only는 재구-취약(Ulman 단독)

@@ -1,0 +1,18 @@
+============================================================
+POC-20 step-1: 반도 Japonic 검정셋 chance-null (CI 양 끝)
+============================================================
+nperm=5000
+
+[robust(A∩B)]  N=7  MI=1.6495  p=0.0008
+   재구-견고 핵심; 전부 Swadesh = Georg 우연충돌 최고위험
+   쌍: [('five', 'wuatsi', 'itu'), ('rabbit', 'osigem', 'usagi'), ('seven', 'nan', 'nana'), ('ten', 'tek', 'towo'), ('three', 'mit', 'mittsu'), ('valley', 'ten', 'tani'), ('water', 'maij', 'mi')]
+
+[max(A∪B)]  N=22  MI=1.5731  p=0.0002
+   최대주의; B-only는 재구-취약(Ulman 단독)
+   쌍: [('bear', 'kewnmewk', 'kuma'), ('cattle', 'o', 'i'), ('child', 'guw', 'ko'), ('deep', 'buwksie', 'pukasi'), ('enter', 'ji', 'iru'), ('five', 'wuatsi', 'itu'), ('land', 'nwej', 'no'), ('lead', 'namjut', 'namari'), ('mountain', 'dat', 'takai'), ('mouth', 'xwettsi', 'kuti'), ('rabbit', 'osigem', 'usagi'), ('red', 'se', 'sabi'), ('seven', 'nan', 'nana'), ('take', 'tawn', 'toru'), ('ten', 'tek', 'towo'), ('three', 'mit', 'mittsu'), ('tree', 'kin', 'ki'), ('valley', 'ten', 'tani'), ('water', 'maij', 'mi'), ('water_deer', 'kosie', 'kujika'), ('wave', 'nwejmej', 'nami'), ('willow', 'jiawin', 'ya')]
+
+------------------------------------------------------------
+★ 판독(정직): 이 셋은 학자 사전선별 → 쌍-셔플 null은 선택편향(너무 쉬움).
+  '유의'여도 관계 확정 아님 = POC-11 체리피킹 함정의 구조적 재현.
+  정직한 검정 = 130 지명 denominator(안 닮은 ~64 포함) + 유형론-매칭 대조군.
+  → POC-20 step-2: Ulman 130 전사 확보 → coverage rate vs chance + 대조군.

@@ -1,0 +1,28 @@
+[파싱] 異名 52쌍 → 의미부여 가능 장소 52개
+    李勣李世勣: 의미['generation', 'plum'] 음가['li', 'tok', 'li', 'syej']
+    國原城託長城: 의미['castle', 'entrust', 'field', 'long', 'state'] 음가['kwok', 'ngjwon', 'dzyeng', 'thak']
+    買召忽彌鄒忽: 의미['buy', 'careless', 'complete'] 음가['mea', 'dzyew', 'xwot', 'mjie']
+    獐項口古斯也忽次: 의미['ancient', 'careless', 'deer', 'lodge', 'mouth', 'neck', 'split'] 음가['tsyang', 'haewng', 'khuw', 'ku']
+    童子忽仇斯波衣: 의미['careless', 'child', 'clothes', 'mate', 'split', 'wave'] 음가['duwng', 'tsi', 'xwot', 'gjuw']
+    北漢山平壤: 의미['distinguish', 'earth', 'mountain', 'north'] 음가['pok', 'xan', 'srean', 'bjien']
+    於斯內斧壤: 의미['axe', 'bring or send in', 'earth', 'oh!', 'split'] 음가['u', 'sje', 'nop', 'pju']
+    阿珍押窮嶽: 의미['mountain', 'poor', 'precious thing', 'seal', 'slope'] 음가['a', 'trin', 'aep', 'gjuwng']
+
+비교어 concept: Japonic 527 / Uralic 575 / Turkic 1175
+
+=== coverage vs 대조군 (임계 민감도 = CI 폭) ===
+ thr    Jap     Ur     Tk  Δ=Jap-maxCtrl
+ 0.4  0.154  0.115  0.173         -0.019   (Jap 8/52)
+ 0.5  0.077  0.038  0.154         -0.077   (Jap 4/52)
+ 0.6  0.058  0.000  0.000         +0.058   (Jap 3/52)
+
+의미-순열 null(thr0.5): obs=4 covered, null평균=4.8, p=0.6852
+수사 제거: Jap covered 4 → 4 (수사 우연충돌 기여 점검)
+
+=== 지역(섹션) 분해 — ②남부집중 vs ③균일 ===
+  sg_037r_0020 溟州동해     N= 52  Jap=0.08 Ur=0.04 Tk=0.15  Δ=-0.08
+
+============================================================
+★ Δ 구간(임계 0.4~0.6) = [-0.077 … +0.058], 의미순열 p=0.6852
+판정: ②/① 경계 — 지역 Δ 패턴(남부집중?)으로 최종판정
+★ 산출=교정된 Δ±CI. 21b 아티팩트와 달리 의미가 異名 실데이터 → 이 floor는 *유효*.
